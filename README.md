@@ -37,7 +37,7 @@ The app uses React's useState hook to manage the following states:
 ### Steps to Run the Project
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/todo-app.git
+   git clone https://github.com/Kapish26/todo-app.git
    cd todo-app
 
 2. Install dependencies:
