@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# TODO App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is a simple Task Manager web application built using React and TypeScript. The app allows users to manage their tasks efficiently by adding, deleting, and marking tasks as completed. Completed tasks are visually distinguished with a strikethrough effect.
 
-## Available Scripts
+## Features
+- **Add a Task**: Users can add a new task with a title and description using a modal popup.
+- **Delete a Task**: Users can delete a task from the list.
+- **Mark a Task as Completed**: Users can mark tasks as completed using a checkbox.
+- **View Tasks**: Users can view all tasks, with completed tasks visually distinguished.
 
+## Implementation Details
+
+### State Management
+The app uses React's useState hook to manage the following states:
+- `todos`: Array of all tasks
+- `showModal`: Boolean to control the visibility of the add task modal
+- `newTodo`: Object containing the title and description of a new task
+
+### Key Components
+1. **App.tsx**: The main component that maintains the state and renders the UI.
+2. **TodoListTile**: A reusable component for displaying individual tasks.
+3. **AddTodoModal**: A modal component for adding new tasks.
+
+### Core Functionality
+- **Adding Tasks**: Click the "Add Todo" button to open a modal, enter task details, and save.
+- **Completing Tasks**: Click the checkbox to mark a task as completed.
+- **Deleting Tasks**: Click the "Delete" button to remove a task.
+- **Task Display**: Completed tasks are visually distinguished with strikethrough text and reduced opacity.
+
+## Setup and Installation
+
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
+
+### Steps to Run the Project
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/todo-app.git
+   cd todo-app
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+
+4. Open your browser and navigate to `http://localhost:3000` to view the app.
+
+### Available Scripts
 In the project directory, you can run:
+- `npm start`: Runs the app in development mode at http://localhost:3000.
+- `npm run build`: Builds the app for production to the `build` folder.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage Guide
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Adding a new task
+1. Click the "+ Add Todo" button
+2. Enter a title and description in the modal
+3. Click "Save" to add the task to your list
 
-### `npm test`
+### Marking a task as completed
+- Click the checkbox next to the task to toggle its completion status
+- Completed tasks will appear with a strikethrough effect and in a separate "Completed Todos" section
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Deleting a task
+- Click the "Delete" button on a task to remove it from the list
 
-### `npm run build`
+## Screenshots
+### Add Task Modal
+![Add Task Modal](add-todo.png)
+### Task List
+![Task List](todo-list-1.png)
+### Completed Tasks
+![Completed Tasks](todo-list-2.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Design Decisions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Component Structure
+The app follows a component-based architecture for better modularity and maintainability. Each component has its own styles and type definitions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Styling
+CSS is used for styling with a clean, minimalist design. Completed tasks are visually distinguished with strikethrough text and reduced opacity.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### TypeScript Integration
+TypeScript is used throughout the app to ensure type safety and improve developer experience.
